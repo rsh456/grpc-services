@@ -13,3 +13,7 @@ path: dir of interface we want to mock and run
 ```
 go generate ./...
 ```
+
+<p align="center">
+<img src="https://github.com/rsh456/grpc-services/blob/master/images/gogenerate.PNG" border="10"/>
+</p>
