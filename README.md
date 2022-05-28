@@ -20,6 +20,11 @@ go generate ./...
 
 ## Implementing Database Package
 [![Latest release](https://badgen.net/github/release/Naereen/Strapdown.js)](https://github.com/jmoiron/sqlx)
-
+ 
 Run a Postgres database using docker
 Use SQLX package for database interactions
+
+## Migrations
+If can't run migrations the applications shouldn't start.
+up: interpreted as the happy path
+down: interpreted as the sad path
