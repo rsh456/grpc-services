@@ -17,3 +17,6 @@ go generate ./...
 <p align="center">
 <img src="https://github.com/rsh456/grpc-services/blob/master/images/gogenerate.PNG" border="10"/>
 </p>
+## Implementing Database Package
+Run a Postgres database using docker
+Use SQLX package for database interactions
