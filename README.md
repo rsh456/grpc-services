@@ -35,5 +35,11 @@ This will create the structure of the database, create and alter tables columns.
 Will use docker compose which will contain both the definition for the database and file for the  application with the environment variables in it.
 
 Docker file top 5 lines represent the builder docker container
+<p align="center">
+<img src="https://github.com/rsh456/grpc-services/blob/master/images/docker-1.PNG" border="10"/>
+</p>
 
 Define the lightweight production image in which be running the application
+<p align="center">
+<img src="https://github.com/rsh456/grpc-services/blob/master/images/docker-2.PNG" border="10"/>
+</p>
