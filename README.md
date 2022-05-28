@@ -28,3 +28,11 @@ Use SQLX package for database interactions
 If can't run migrations the applications shouldn't start.
 up: interpreted as the happy path
 down: interpreted as the sad path
+This will create the structure of the database, create and alter tables columns. 
+
+## Docker Compose
+Will use docker compose which will contain both the definition for the database and file for the  application with the environment variables in it.
+
+Docker file top 5 lines represent the builder docker container
+
+Define the lightweight production image in which be running the application
