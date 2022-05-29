@@ -1,5 +1,5 @@
 # Multistage docker file
-FROM golang:1:16 AS builder
+FROM golang:1.16 AS builder
 
 # Create App directory
 RUN mkdir /app
@@ -10,6 +10,7 @@ WORKDIR /app
 
 # run the build command operating system is linux
 RUN CGO_ENABLED=0 GOOS=linux go build -o app cmd/server/main.go
+
 
 
 FROM alpine:latest AS production
