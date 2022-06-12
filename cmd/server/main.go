@@ -5,6 +5,7 @@ import (
 
 	"github.com/rsh456/grpc-services/internal/db"
 	"github.com/rsh456/grpc-services/internal/rocket"
+	"github.com/rsh456/grpc-services/internal/transport/grpc"
 )
 
 func Run() error {
@@ -14,12 +15,18 @@ func Run() error {
 	if err != nil {
 		return err
 	}
+
 	err = rocketStore.Migrate()
 	if err != nil {
 		log.Println("Failed to run migrations")
 		return err
 	}
-	_ = rocket.New(rocketStore)
+	rktService := rocket.New(rocketStore)
+	rktHandler := grpc.New(rktService)
+
+	if err := rktHandler.Serve(); err != nil {
+		return err
+	}
 
 	return nil
 }

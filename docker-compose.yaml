@@ -14,8 +14,7 @@ services:
       - fullstack
     volumes:
       - database_postgres:/var/lib/postgresql/data
-
-  # define api services
+  
   api:
     build: .
     container_name: "grpc-microservice"
